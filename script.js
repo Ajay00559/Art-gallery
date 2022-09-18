@@ -75,7 +75,7 @@ function gsapSecondPage() {
         scrollTrigger: {
             trigger: "#second",
             start: "top 60%",
-            scrub: 2
+            scrub: 4
         }
     });
 
