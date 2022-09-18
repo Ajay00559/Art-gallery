@@ -513,8 +513,8 @@ body::-webkit-scrollbar{
     }
 
     /* third part code */
-
-    .strcnt>h1>img{
+ 
+  .strcnt>h1>img{
         width:  60vw;
         height: 40vw;
         align-self: center;
@@ -533,67 +533,30 @@ body::-webkit-scrollbar{
         transform-origin: -50%,-50%;
         transform: rotate(-90deg);
     } 
+    .strcnt>h1{
+        margin-left: 5vw;
+        margin-bottom: 5vw;
+        font-family: "helvetica";
+        
+    }
     .strcnt{
-        margin-left: -30vh;
-        /* margin-bottom: -80vh; */
+        margin-left: -40vw;
+         
          object-fit: cover;
         transform-origin: -50%,-50%;
         transform: rotate(-90deg);
     }
-
-   /* #thleft h1{
-        font-size: 12vw;
-         transform-origin: -50%,-50%;
-        transform: rotate(-90deg);
-    }
+ 
 
     #thleft p{
-        width: 100%;
-        font-size: 6vw;
+        width: 80%;
+        font-size: 4vw;
         margin-top: 10vw;
-        line-height: 7vw;
-    }
+        line-height: 4vw;
+    } 
+ 
 
-   /* .stripe{
-        width: 100%;
-        height: 6%;
-    }
-
-    .stripe:nth-child(2){
-        width: 100%;
-        right: initial;
-        left: 0;
-        bottom: 18%;
-    }
-
-    .stripe:nth-child(3){
-        width: 100%;
-        right: initial;
-        left: 0;
-        bottom: 12%;
-    }
-
-    .stripe:nth-child(4){
-        width: 100%;
-        right: initial;
-        left: 0;
-        bottom: 6%;
-    }
-
-    .stripe:nth-child(5){
-        width: 100%;
-        right: initial;
-        left: 0;
-        bottom: 0%;
-    }
-
-    .stripe h4{
-        bottom: initial;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-size: 3vw;
-        transform-origin: initial;
-    } */
+   
 
     /* fourth part code */
 
