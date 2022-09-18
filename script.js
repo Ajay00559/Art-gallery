@@ -1,4 +1,4 @@
-function init(){
+ function init(){
     document.fonts.ready.then(function(){
         document.querySelector("#loader").style.display = "none";
     });
@@ -91,57 +91,111 @@ function gsapSecondPage() {
         }, "maakda")
 }
 
-function thirdPage() {
-    document.querySelector("#third")
-        .addEventListener("click", function (dets) {
-            console.log(dets.target.children[0]);
-            if (isNaN(Number(dets.target.id))) {
+// function thirdPage() {
+     
+//     document.querySelector("#third")
+//         .addEventListener("click", function (dets) {
+//             console.log(dets.target.children[0]);
+//             if (isNaN(Number(dets.target.id))) {
                 
-                var elem = ".strcnt"+dets.target.id.split("-")[0];
+//                 var elem = ".strcnt"+dets.target.id.split("-")[0];
 
-                gsap.to(elem, {
-                    opacity: 0,
-                    ease: Expo.easeInOut,
-                    duration: 1.5,
-                })
+//                 gsap.to(elem, {
+                    
+//                     opacity: 0,
+//                     ease: Expo.easeInOut,
+//                     duration: 1.5,
+//                 })
 
-                gsap.to(dets.target, {
-                    opacity: 0
-                })
+//                 gsap.to(dets.target, {
+//                     opacity: 0
+//                 })
 
-                gsap.to(dets.target.offsetParent, {
-                    width: 4+"%",
-                    ease: Expo.easeInOut,
-                    duration: 1.5,
-                    delay: .5
-                })
-            }
-            else {
-                var dec = 100 - (4 - dets.target.id) * 4;
-                var elem = document.querySelector(".strcnt" + dets.target.id);
+//                 gsap.to(dets.target.offsetParent, {
+//                     width: 4+"%",
+//                     ease: Expo.easeInOut,
+//                     duration: 1.5,
+//                     delay: .5
+//                 })
+//             }
+//             else {
+//                 var dec = 100 - (4 - dets.target.id) * 4;
+//                 var elem = document.querySelector(".strcnt" + dets.target.id);
 
-                console.log(elem);
+//                 console.log(elem);
 
-                gsap.to(dets.target, {
-                    width: dec + "%",
-                    ease: Expo.easeInOut,
-                    duration: 1.5
-                })
+//                 gsap.to(dets.target, {
+//                     width: dec + "%",
+//                     ease: Expo.easeInOut,
+//                     duration: 1.5
+//                 })
 
-                gsap.to(dets.target.children[0], {
-                    opacity: 1
-                })
+//                 gsap.to(dets.target.children[0], {
+//                     opacity: 1
+//                 })
 
-                gsap.to(elem, {
-                    opacity: 1,
-                    ease: Expo.easeInOut,
-                    duration: 1.5,
-                    delay: 1
-                })
-            }
+//                 gsap.to(elem, {
+//                     opacity: 1,
+//                     ease: Expo.easeInOut,
+//                     duration: 1.5,
+//                     delay: 1
+//                 })
+//             }
+//         })
+// }
+
+
+ 
+function thirdPages() {
+
+    document.querySelector("#third")
+      .addEventListener("click", function (dets) {
+        var sp = dets.target.id
+        var gt = (sp.split("-")[1])
+        //  console.log(sp.split("-")[0])
+        var str = ("#" + sp)
+        var dec = 100 - (4 - gt) * 4;
+        gsap.to("#"+sp, {
+          width: dec + "%",
+  
+          ease: Expo.easeInOut,
+          duration: 1.5
         })
-}
+        gsap.to( "#str-cr-" + gt, {
+  
+        //    display:"initial",
+          opacity: 1,
+          pointerEvents: "all",
+          ease: Expo.ease,
+          duration: 1.5,
+          delay: 1,
+        })
+        var cr = "#str-cr-" + gt
+  
+        document.querySelector(cr).addEventListener("click", function (dets) {
+          //      var crs=dets.target.id.split("-")[1]
+  
+          console.log(dets.target.id)
+          gsap.to("#"+sp, {
+            width: "4%",
+            // opacity:0,
+            ease: Expo.easeInOut,
+            duration: 1.5
+          })
+          gsap.to("#" + dets.target.id, {
+            // width: dec +"%",
+            opacity: 0,
+        //    display:"none",
 
+            pointerEvents: "none", 
+            ease: Expo.ease,
+            duration: .5
+          })
+        })
+      })
+  }
+
+ 
 
 function fourthPage(){
     document.querySelectorAll(".elem")
@@ -171,31 +225,10 @@ function convertMainScreenTextToChars() {
         })
 }
 
-// function mouse(){
-//     document.querySelectorAll("img").forEach(function (img) {
-//         img.addEventListener("mousemove", function (dets) {
-//             var bndrectvals = document.querySelector("img").getBoundingClientRect()
-//             var xVal = dets.clientX - bndrectvals.x;
-//             var yVal = dets.clientY - bndrectvals.y;
-
-//             document.querySelector("#minicircle").style.top = yVal + "px";
-//             document.querySelector("#minicircle").style.left = xVal + "px";
-//             document.querySelector("#minicircle").style.boxShadow = "0 0 10px 3px green";
-//         })
-
-//     document.querySelector("img")
-//         .addEventListener("mouseleave", function (dets) {
-//             document.querySelector("#minicircle").style.top = 50 + "%";
-//             document.querySelector("#minicircle").style.left = 50 + "%";
-
-//             document.querySelector("#minicircle").style.boxShadow = "none";
-//         })
-//     })
-// }
-// mouse()
+ 
 init();
 convertMainScreenTextToChars();
 gsapInitFirstPage();
 gsapSecondPage();
-thirdPage();
+thirdPages();
 fourthPage();
