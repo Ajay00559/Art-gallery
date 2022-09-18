@@ -90,60 +90,7 @@ function gsapSecondPage() {
             duration: 5
         }, "maakda")
 }
-
-// function thirdPage() {
-     
-//     document.querySelector("#third")
-//         .addEventListener("click", function (dets) {
-//             console.log(dets.target.children[0]);
-//             if (isNaN(Number(dets.target.id))) {
-                
-//                 var elem = ".strcnt"+dets.target.id.split("-")[0];
-
-//                 gsap.to(elem, {
-                    
-//                     opacity: 0,
-//                     ease: Expo.easeInOut,
-//                     duration: 1.5,
-//                 })
-
-//                 gsap.to(dets.target, {
-//                     opacity: 0
-//                 })
-
-//                 gsap.to(dets.target.offsetParent, {
-//                     width: 4+"%",
-//                     ease: Expo.easeInOut,
-//                     duration: 1.5,
-//                     delay: .5
-//                 })
-//             }
-//             else {
-//                 var dec = 100 - (4 - dets.target.id) * 4;
-//                 var elem = document.querySelector(".strcnt" + dets.target.id);
-
-//                 console.log(elem);
-
-//                 gsap.to(dets.target, {
-//                     width: dec + "%",
-//                     ease: Expo.easeInOut,
-//                     duration: 1.5
-//                 })
-
-//                 gsap.to(dets.target.children[0], {
-//                     opacity: 1
-//                 })
-
-//                 gsap.to(elem, {
-//                     opacity: 1,
-//                     ease: Expo.easeInOut,
-//                     duration: 1.5,
-//                     delay: 1
-//                 })
-//             }
-//         })
-// }
-
+ 
 
  
 function thirdPages() {
