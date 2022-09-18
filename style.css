@@ -1,5 +1,7 @@
-@font-face{
-    src: url("./fonts/Hello\ Paris\ Sans\ ExtraLight.ttf");
+ 
+      
+  @font-face{
+    src: url("./fonts/Hello Paris Sans ExtraLight.ttf");
     font-family: "Hello Paris";
 }
 
@@ -296,11 +298,10 @@ body::-webkit-scrollbar{
     font-weight: 900;
     white-space: nowrap;
 }
-
+ 
 #third{
     position: relative;
     display: flex;
-   pointer-events: none;
     justify-content: flex-end;
     width: 100%;
     height: 100vh;
@@ -316,6 +317,12 @@ body::-webkit-scrollbar{
     background-color: rgb(223, 90, 90);
 }
 
+#thleft{
+    width: 100%;
+    height: 100%;
+    /* pointer-events: none; */
+    background-color: rgba(0, 0, 0, 0.441);
+}
 .strcnt{
     pointer-events: none;
     opacity: 0;
@@ -325,18 +332,31 @@ body::-webkit-scrollbar{
     top: 50%;
     left: 50%;
     font-family: "Gilroy";
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) .5s;
     transform: translate(-50%, -50%);
 }
 #glr{
     color: rgb(184, 63, 11);
     font-size: 5vw ;
 }
-.strcnt h1{
+.strcnt>h1{
     font-size: 4vw;
     line-height: 4vw;
-
+    
     margin-bottom: 10vh;
 }
+/* #str-cr-1{
+    display: none;
+}
+#str-cr-2{
+    display: none;
+}
+#str-cr-3{
+    display: none;
+}
+#str-cr-4{
+    display: none;
+} */
 /* .strcnt>img{
     width: 100%;
     height: 100%;
@@ -393,8 +413,6 @@ body::-webkit-scrollbar{
 #thleft{
     position: absolute;
     padding: 4vw;
-   pointer-events: none;
-    
     width: 84%;
     left: 0;
     height: 100%;
@@ -516,8 +534,8 @@ body::-webkit-scrollbar{
     }
 
     /* third part code */
- 
-  .strcnt>h1>img{
+
+    .strcnt>h1>img{
         width:  60vw;
         height: 40vw;
         align-self: center;
@@ -531,6 +549,7 @@ body::-webkit-scrollbar{
     }
 
      #thleft{
+        pointer-events: visible;
         width: 100%;
         padding: 6vw;
         transform-origin: -50%,-50%;
@@ -558,9 +577,6 @@ body::-webkit-scrollbar{
         line-height: 4vw;
     } 
  
-
-   
-
     /* fourth part code */
 
     #fourth{
